@@ -42,10 +42,31 @@ Copy a key for an server
 ssh-copy-id -i ~/.ssh/key_name.pub xxx.xxx.xxx.xxx
 ```
 
-### Server best practices configuration
-Disable password connection
+Config file `~/.ssh/config`
 ```sh
+Host server-nickname
+     HostName xxx.xxx.xxx.xxx
+     IdentityFile ~/.ssh/key-name
+     User server-username
+```
 
+```sh
+ssh server-nickname
+```
+
+### Server configuration
+Ensuring that ssh is installed and running
+The package to install if necessary is `openssh-server`
+```sh
+ssh -V
+systemctl status sshd # and all variants: `reload`, `start` and `enable` to ensure it starts on boot.
+```
+
+Disable password connection editing the file `/etc/ssh/sshd_config`
+```sh
+PasswordAuthentication no
+PubKeyAuthentication yes
+PermitRootLogin no
 ```
 
 
