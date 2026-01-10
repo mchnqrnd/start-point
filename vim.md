@@ -24,3 +24,11 @@
 |:bd                |delete --(closes)-- the current buffer or commonly used `bp|bd#`           |
 |:!ls               |runs bash commands inside vi, this case `ls` command                       |
 
+## Configuration file
+The configuraton file for vim is `~/.vimrc`
+
+Just type any valid vi command for vi in the file and all new instances of vim will take this configuration on startup
+
+```sh
+set number
+```
