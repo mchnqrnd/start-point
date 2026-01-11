@@ -16,3 +16,15 @@
 |ctrl+b %       	|horizontal split   			|
 |ctrl+b "       	|verticar split     			|
 |ctrl+b arrows  	|splits navigation  			|
+|ctrl+b ctrl+arrow  |resize pane        			|
+
+## Config file
+The config file for tmux is `~/.tmux.conf`
+
+```sh
+# Disable bell
+setw -g monitor-bell off
+
+# Mouse Mode
+set -g mouse on
+```
